@@ -70,9 +70,15 @@ namespace Customer.Microservice.Controllers
 
         // DELETE api/<CustomerController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> DeleteCustomer(string id)
         {
-
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                var sqlQuery = "Delete Customer WHERE Id=@Id";
+                await connection.ExecuteAsync(sqlQuery, id);
+            }
+            return Ok();
         }
     }
 }
