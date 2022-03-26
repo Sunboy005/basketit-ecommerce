@@ -76,7 +76,7 @@ namespace Customer.Microservice.Controllers
             {
                 await connection.OpenAsync();
                 var sqlQuery = "Delete Customer WHERE Id=@Id";
-                await connection.ExecuteAsync(sqlQuery, id);
+                await connection.ExecuteAsync(sqlQuery,new { Id = id });
             }
             return Ok();
         }
