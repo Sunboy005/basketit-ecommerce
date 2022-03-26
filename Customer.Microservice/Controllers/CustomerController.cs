@@ -1,6 +1,7 @@
 ﻿using Customer.Microservice.Model;
 using Dapper;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace Customer.Microservice.Controllers
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 await connection.OpenAsync();
-                var sqlQuery = "Select * From Customer Where Id=@id";
+                var sqlQuery = "Select * From Customer Where Id= @Id";
                 customer = await connection.QuerySingleAsync<Model.Customer>(sqlQuery, new {Id=id});
             }
             return customer;
@@ -48,8 +49,9 @@ namespace Customer.Microservice.Controllers
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                customer.Id = Guid.NewGuid().ToString();
                 await connection.OpenAsync();
-                var sqlQuery = "Insert into Customer (FirstName, LastName, Address,Telephone, Email) Values (@FirstName, @LastName, @Address, @Telephone, @Email)";
+                var sqlQuery = "Insert into Customer (Id, FirstName, LastName, Address,Telephone, Email) Values (@Id, @FirstName, @LastName, @Address, @Telephone, @Email)";
                  await connection.ExecuteAsync(sqlQuery, customer);
             }
             return Ok();
