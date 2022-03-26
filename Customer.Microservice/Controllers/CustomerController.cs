@@ -1,5 +1,4 @@
-﻿using Customer.Microservice.Model;
-using Dapper;
+﻿using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -44,41 +43,20 @@ namespace Customer.Microservice.Controllers
 
         // POST api/<CustomerController>
         [HttpPost]
-        public async Task<IActionResult> AddCustomer ([FromForm] Model.Customer customer)
+        public void Post([FromBody] string value)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                await connection.OpenAsync();
-                var sqlQuery = "Insert into Customer (FirstName, LastName, Address,Telephone, Email) Values (@FirstName, @LastName, @Address, @Telephone, @Email)";
-                 await connection.ExecuteAsync(sqlQuery, customer);
-            }
-            return Ok();
         }
 
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCustomer(string id, [FromBody] Model.Customer customer)
+        public void Put(int id, [FromBody] string value)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                await connection.OpenAsync();
-                var sqlQuery = "Update Customer Set FirstName=@FirstName, LastName= @LastName, Address= @Address,Telephone= @Telephone, Email= @Email WHERE Id=@Id";
-                await connection.ExecuteAsync(sqlQuery, customer);
-            }
-            return Ok();
         }
 
         // DELETE api/<CustomerController>/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomer(string id)
+        public void Delete(int id)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                await connection.OpenAsync();
-                var sqlQuery = "Delete Customer WHERE Id=@Id";
-                await connection.ExecuteAsync(sqlQuery, id);
-            }
-            return Ok();
         }
     }
 }
