@@ -43,14 +43,22 @@ namespace Customer.Microservice.Controllers
 
         // POST api/<CustomerController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> AddCustomer ([FromForm] Model.Customer customer)
         {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                var sqlQuery = "Insert into Customer (FirstName, LastName, Address,Telephone, Email) Values (@FirstName, @LastName, @Address, @Telephone, @Email)";
+                 await connection.ExecuteAsync(sqlQuery, customer);
+            }
+            return Ok();
         }
 
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+
         }
 
         // DELETE api/<CustomerController>/5
