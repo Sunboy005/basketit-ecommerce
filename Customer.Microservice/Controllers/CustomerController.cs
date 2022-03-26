@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using Customer.Microservice.Model;
+using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -56,15 +57,22 @@ namespace Customer.Microservice.Controllers
 
         // PUT api/<CustomerController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> UpdateCustomer(string id, [FromBody] Model.Customer customer)
         {
-
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                var sqlQuery = "Update Customer Set FirstName=@FirstName, LastName= @LastName, Address= @Address,Telephone= @Telephone, Email= @Email WHERE Id=@Id";
+                await connection.ExecuteAsync(sqlQuery, customer);
+            }
+            return Ok();
         }
 
         // DELETE api/<CustomerController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+
         }
     }
 }
