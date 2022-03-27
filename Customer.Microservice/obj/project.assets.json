@@ -341,6 +341,16 @@
             "rid": "win"
           }
         }
+      },
+      "Share.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Share.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Share.Models.dll": {}
+        }
       }
     }
   },
@@ -1045,6 +1055,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Share.Models/1.0.0": {
+      "type": "project",
+      "path": "../Share.Models/Share.Models.csproj",
+      "msbuildProject": "../Share.Models/Share.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1052,6 +1067,7 @@
       "Dapper >= 2.0.123",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.15",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.15",
+      "Share.Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "Swashbuckle.AspNetCore.Swagger >= 5.6.3",
       "System.Data.SqlClient >= 4.8.3"
@@ -1091,7 +1107,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\hp\\Desktop\\Programming-Languages\\WebApi\\Microservices\\Microservices.WebApi\\Share.Models\\Share.Models.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Programming-Languages\\WebApi\\Microservices\\Microservices.WebApi\\Share.Models\\Share.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

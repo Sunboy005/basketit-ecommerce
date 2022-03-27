@@ -1630,6 +1630,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Share.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Share.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Share.Models.dll": {}
+        }
       }
     }
   },
@@ -6053,6 +6063,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Share.Models/1.0.0": {
+      "type": "project",
+      "path": "../Share.Models/Share.Models.csproj",
+      "msbuildProject": "../Share.Models/Share.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6064,6 +6079,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.15",
       "Microsoft.IdentityModel.Protocols.OpenIdConnect >= 5.6.0",
+      "Share.Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -6101,7 +6117,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\hp\\Desktop\\Programming-Languages\\WebApi\\Microservices\\Microservices.WebApi\\Share.Models\\Share.Models.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Programming-Languages\\WebApi\\Microservices\\Microservices.WebApi\\Share.Models\\Share.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
