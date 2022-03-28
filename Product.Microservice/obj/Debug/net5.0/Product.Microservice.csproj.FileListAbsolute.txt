@@ -62,3 +62,16 @@ C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.Web
 C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\obj\Debug\net5.0\Product.Microservice.pdb
 C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\obj\Debug\net5.0\Product.Microservice.genruntimeconfig.cache
 C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\obj\Debug\net5.0\ref\Product.Microservice.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\Automatonymous.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\GreenPipes.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\MassTransit.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\MassTransit.AspNetCoreIntegration.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\MassTransit.RabbitMqTransport.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\NewId.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\Share.Models.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Product.Microservice\bin\Debug\net5.0\Share.Models.pdb

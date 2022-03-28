@@ -26,18 +26,16 @@ namespace Product.Microservice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMassTransit(x =>
-                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(configuration =>
+                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
                  {
-                     configuration.UseHealthCheck(provider);
-                     configuration.Host(new Uri("rabbitmq://localhost"), h =>
+                     config.UseHealthCheck(provider);
+                     config.Host(new Uri("rabbitmq://localhost"), h =>
                      {
                          h.Username("guest");
                          h.Password("guest");
                      });
-                 }
-               )
-              )
-             );
+                 })));
+            services.AddMassTransitHostedService();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

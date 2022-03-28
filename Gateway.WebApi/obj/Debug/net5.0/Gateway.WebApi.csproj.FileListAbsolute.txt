@@ -20,3 +20,4 @@ C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.Web
 C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.pdb
 C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\Gateway.WebApi.genruntimeconfig.cache
 C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Gateway.WebApi\obj\Debug\net5.0\ref\Gateway.WebApi.dll
+C:\Users\hp\Desktop\Programming-Languages\WebApi\Microservices\Microservices.WebApi\Gateway.WebApi\bin\Debug\net5.0\ocelot.json
